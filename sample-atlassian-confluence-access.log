@@ -1,0 +1,13 @@
+2013-02-08 00:00:20,874 INFO [TP-Processor2] [atlassian.confluence.util.AccessLogFilter] doFilter - https://pandoba.com/display/HOME/home 1147658 1 10.30.109.82
+2013-02-08 00:00:22,201 INFO [TP-Processor5] [atlassian.confluence.util.AccessLogFilter] doFilter mogambo https://pandoba.com/pages/viewpage.action?pageId=12354 1146604-99 2 172.17.250.122
+2013-02-08 00:00:22,278 INFO [TP-Processor8] [atlassian.confluence.util.AccessLogFilter] doFilter ralu https://pandoba.com/rest/mywork/latest/status/notification/count 1145238 2 172.17.250.63
+2013-02-08 00:00:25,603 INFO [TP-Processor2] [atlassian.confluence.util.AccessLogFilter] doFilter emoynihan https://pandoba.com/rest/mywork/latest/status/notification/count 1145179 2 172.20.0.88
+2013-02-08 00:00:40,121 INFO [TP-Processor5] [atlassian.confluence.util.AccessLogFilter] doFilter tami https://pandoba.com/rest/mywork/latest/status/notification/count 1143504-99 2 172.17.250.54
+2013-02-08 00:01:07,687 INFO [TP-Processor5] [atlassian.confluence.util.AccessLogFilter] doFilter - https://pandoba.com/rest/mywork/latest/status/notification/count 1136899 2 172.17.250.101
+2013-02-08 00:01:11,803 INFO [TP-Processor2] [atlassian.confluence.util.AccessLogFilter] doFilter vali https://pandoba.com/rest/mywork/latest/status/notification/count 1136173-505 1 172.17.250.54
+2013-02-08 00:01:19,903 INFO [TP-Processor8] [atlassian.confluence.util.AccessLogFilter] doFilter - https://pandoba.com/rest/activity-stream/1.0/config 1134510 1 10.30.109.76
+2013-02-08 00:01:34,240 INFO [TP-Processor2] [atlassian.confluence.util.AccessLogFilter] doFilter - https://wiki.savagebeast.com/ 1132677 1 10.30.109.64
+2013-02-08 00:01:34,240 INFO [TP-Processor2] [atlassian.confluence.util.AccessLogFilter] doFilter - https://pandoba.com/homepage.action 1132677 1 10.30.109.64
+2013-02-08 00:01:34,240 INFO [TP-Processor2] [atlassian.confluence.util.AccessLogFilter] doFilter - https://wiki.savagebeast.com 1132677 1 10.30.109.64
+2013-02-08 00:00:22,201 INFO [TP-Processor5] [atlassian.confluence.util.AccessLogFilter] doFilter mogambo https://pandoba.com/pages/createpage.action?pageId=12354 1146604-99 2 172.17.250.122
+2013-02-08 00:00:22,201 INFO [TP-Processor5] [atlassian.confluence.util.AccessLogFilter] doFilter mogambo https://pandoba.com/pages/docreatepage.action?pageId=12354 1146604-99 2 172.17.250.122
