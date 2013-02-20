@@ -8,11 +8,14 @@ This application provides way to get Confluence Usage metrics - Atlassian Codege
 * Create Postgres Database to store analyzed log entries.
 * NOTE: It's advised you don't use your PRODUCTION JIRA database!
 
+```
 createdb -O <jiraowner-E UNICODE <databasename>
 createdb -O jira -E UNICODE metricsdb;
+```
 
 * Create a table to store logentires;
 
+```
 psql metricsdb;
 
 metricsdb=#CREATE TABLE logentries (
@@ -29,6 +32,7 @@ metricsdb=#CREATE TABLE logentries (
     datetimestamp timestamp without time zone,
     actionname character varying(255)
 );
+```
 
 * That's our setup to store confluence metrics information!
 
@@ -43,24 +47,32 @@ Refer to this link on how to get this done : https://confluence.atlassian.com/di
 ### It's time to analyze the metrics
 * Copy all altassian-confluence-access.log files that you want to analyze (remember there is one file for each day!) into logs directory.
 * For each log file that you want to analyze run following command.
+
+```
     ./analyze.py <log file name>
     ./analyze.py logs/atlassian-confluence-access.log.2013-02-08
     ./analyze.py logs/atlassian-confluence-access.log.2013-02-09
+```
 
 P.S.: Please note that application creates intermediate csv file (log.csv) which we later import into database table.
 
 * Please remember if you analyze same log file again, it will add duplicate entries into database.
 * verify if entries are created or not
 
+```
     metricsdb=# select count(*) from logentries;
+```
 
 ### Time to generate charts
 * Let's say we want to get all the pages viewed in a given space
+
+```
     select title, count(*) from logentries 
         where spacekey = 'DOC' 
         and useraction = "view" 
         and usersubaction = "page" 
         and actioname != ''
+```
 
 ### Contributors
 * Raju Kadam
