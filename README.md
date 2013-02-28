@@ -63,16 +63,64 @@ P.S.: Please note that application creates intermediate csv file (log.csv) which
     metricsdb=# select count(*) from logentries;
 ```
 
-### Time to generate charts
-* Let's say we want to get all the pages viewed in a given space
+### Query to generate chart data
+* To get all the pages that got top hits
+* To get total view hits per space 
 
 ```
-    select title, count(*) from logentries 
-        where spacekey = 'DOC' 
-        and useraction = "view" 
-        and usersubaction = "page" 
-        and actioname != ''
+metricsdb=> select spacekey || ' - ' || title , count(*) 
+from logentries 
+where useraction = 'view' and usersubaction='page' and spacekey != '' group by title, spacekey 
+order by count(*) desc;
+
+metricsdb=> select spacekey, count(*) 
+from logentries 
+where spacekey != '' and useraction = 'view'
+group by spacekey;
 ```
+<table>
+  <tr>
+    <th>Page Title</th><th>Hits</th>
+  </tr>
+  <tr>
+    <td>Autodesk 3D Tour</td><td>461</td>
+  </tr>
+  <tr>
+    <td>Challenge Post Wiki - Home Page</td><td>50</td>
+  </tr>
+  <tr>
+    <td>HR Home Page</td><td>24</td>
+  </tr>
+  <tr>
+    <td>AUG - SF Home</td><td>18</td>
+  </tr>
+  <tr>
+    <td>AUG - EBAY Home</td><td>10</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Wiki Space</th><th>Page Views</th>
+  </tr>
+  <tr>
+    <td>HOME</td><td>472</td>
+  </tr>
+  <tr>
+    <td>SALES</td><td>147</td>
+  </tr>
+  <tr>
+    <td>HR</td><td>58</td>
+  </tr>
+  <tr>
+    <td>GAMERS</td><td>52</td>
+  </tr>
+  <tr>
+    <td>IT</td><td>25</td>
+  </tr>
+</table>
+
+### Use this data along with Chart macro to display data in graphical format.
 
 ### Contributors
 * Raju Kadam
