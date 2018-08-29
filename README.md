@@ -3,6 +3,8 @@ confluence-metrics
 
 This application provides way to get Confluence Usage metrics - Atlassian Codegeist 2013
 
+Now you can use [Page View for Confluence Add-on](https://marketplace.atlassian.com/apps/1215565/page-view?hosting=server&tab=overview) as it provides all this information in friendly manner; also cost is very less!
+
 ### Postgres Database Setup
 
 * Create Postgres Database to store analyzed log entries.
